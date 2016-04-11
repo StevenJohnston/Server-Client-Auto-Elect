@@ -447,12 +447,12 @@ function getCommand()
     {
       //Check string typed
       switch (data) {
-        case "close"://Close server
+        case "--close"://Close server
           //redirect clients
           redirectClients();
           break;
         case "--help"://User asked for help
-          console.log("--> type [close] to stop server \n-->or a message to send to all clients");
+          console.log("--> type [--close] to stop server \n-->or a message to send to all clients");
           break;
         default:
           //Send Message to all clients
@@ -465,9 +465,9 @@ function getCommand()
       //Chech string typed
       switch (data) {
         case "--help"://user asked for help
-          console.log("--> Type [close] to disconnect from server \n-->or a message to send to server");
+          console.log("--> Type [--close] to disconnect from server \n-->or a message to send to server");
           break;
-        case "close":
+        case "--close":
           //close connection to server
           connectionToServer.closeConnection();
           break;
