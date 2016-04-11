@@ -279,7 +279,7 @@ function becomeServer()
       {
         console.log("Found other server :" + reciveBroadCast.ip + ", Date Create : " + reciveBroadCast.dateCreated);
         //If this server is new then other server
-        if(startTime < reciveBroadCast.dateCreated)
+        if(startTime > reciveBroadCast.dateCreated)
         {
           console.log("Swapping users to other server");
           //redirect all out client to other server
